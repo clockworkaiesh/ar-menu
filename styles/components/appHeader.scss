@@ -1,0 +1,36 @@
+.app-header {
+  @apply bg-white flex items-center justify-between py-8 px-7 h-[50px] mb-5 sticky top-0 z-[9];
+  box-shadow: 0px 0px 8px rgba(211, 209, 216, 0.3);
+}
+.home-link {
+  @apply text-2xl cursor-pointer;
+}
+
+// sidebar
+.sidebar {
+  @apply bg-white fixed z-40 left-0 top-0 bottom-0 w-[70%] max-w-[500px] flex flex-col justify-between transition-all duration-200 ease-linear -translate-x-full;
+  &.open{
+    @apply translate-x-0;
+  }
+}
+.sidebar-brand-logo {
+  @apply w-[90px] h-[90px] mx-auto my-4;
+}
+.sidebar-footer {
+  @apply pb-4 text-center;
+  .powered-by {
+    @apply flex items-center gap-3 justify-center font-semibold;
+  }
+}
+.top-row{
+  @apply relative;
+}
+.close-btn{
+  @apply absolute top-4 right-5 text-2xl;
+}
+.menu-items-list{
+  @apply mt-6 flex flex-col gap-4 px-[25px];
+  a{
+    @apply flex items-center gap-3 text-xl transition-all duration-200 ease-in-out cursor-pointer; 
+  }
+}

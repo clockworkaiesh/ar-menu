@@ -1,0 +1,96 @@
+.landing-page {
+  @apply h-full w-full py-3 px-[35px] relative  z-20 flex flex-col justify-between;
+  background: url(../../public/images/app-home-bg.jpg) left 0 top 0 / cover
+      no-repeat,
+    #000;
+  &::after {
+    content: '';
+    @apply absolute left-0 top-0 right-0 bottom-0 bg-black opacity-70 w-full h-full -z-10;
+  }
+  .brand-logo {
+    @apply absolute w-[240px] h-[240px] object-contain mx-auto scale-[0.8] top-0 left-0 right-0  pt-[30px];
+    animation-name: brandLogoAnimation;
+    animation-duration: 1900ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 100ms;
+  }
+  &.start {
+    &:after {
+      content: '';
+      @apply absolute left-0 top-0 right-0 bottom-0 bg-white opacity-100 w-full h-full z-10;
+    }
+    .brand-logo {
+      @apply z-40;
+    }
+  }
+}
+
+.content-block {
+  @apply flex flex-col gap-[90px];
+  h2 {
+    @apply text-[40px] text-white font-bold leading-tight mb-2;
+  }
+  p {
+    @apply text-white text-lg;
+  }
+}
+// copyright
+.copyright {
+  @apply text-white text-center;
+  button {
+    @apply mb-5;
+  }
+  .powered-by {
+    @apply flex gap-1 items-center justify-center;
+  }
+}
+
+@keyframes brandLogoAnimation {
+  0% {
+    transform: translateY(100%) scale(0.8);
+  }
+  35% {
+    transform: translateY(100%) scale(1.4);
+  }
+  75% {
+    transform: translateY(100%) scale(1.2);
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+  }
+}
+
+// LANGUAGE SWITCHER
+.toggle {
+  @apply mb-4 cursor-pointer inline-block;
+}
+.toggle-switch {
+  @apply inline-block bg-black rounded-[16px] w-[56px] h-[20px] relative align-middle transition-all duration-300;
+
+  &:before,
+  &:after {
+    content: '';
+  }
+  &:before {
+    @apply block rounded-[30px] w-[20px] h-[20px] absolute top-0 left-0 transition-all duration-300;
+    // background: orange;
+  }
+
+  .toggle-checkbox:checked + & {
+    &:before {
+      @apply left-[36px];
+    }
+  }
+}
+.toggle-checkbox {
+  @apply absolute hidden;
+}
+.toggle-label {
+  @apply ml-[5px] relative top-[2px] mx-[5px] text-xs font-light;
+}
+.intro-text {
+  @include r-medium {
+    @apply max-w-[90%] text-center mx-auto;
+  }
+}
