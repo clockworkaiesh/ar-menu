@@ -1,5 +1,5 @@
 .landing-page {
-  @apply h-full w-full pt-3 pb-[45px] px-[35px] relative  z-20 flex flex-col justify-between;
+  @apply h-screen w-full pt-3 pb-[45px] px-[35px] relative  z-20 flex flex-col justify-between;
   background: url(../../public/images/app-home-bg.jpg) left 0 top 0 / cover
       no-repeat,
     #000;
