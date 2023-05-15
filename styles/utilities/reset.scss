@@ -140,8 +140,8 @@ body {
 /* Set the height and width of all elements to 100% of viewport */
 .app-container {
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-	background: #f8f8f8;
+  width: calc(100vw - 0px);
+  height: calc(100vh - 70px);
+  background: #f8f8f8;
   overflow-y: auto;
 }

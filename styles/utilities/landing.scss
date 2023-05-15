@@ -8,7 +8,7 @@
     @apply absolute left-0 top-0 right-0 bottom-0 bg-black opacity-70 w-full h-full -z-10;
   }
   .brand-logo {
-    @apply absolute w-[240px] h-[240px] object-contain mx-auto scale-[0.8] top-0 left-0 right-0  pt-[30px];
+    @apply absolute w-[180px] h-[180px] object-contain mx-auto scale-[0.8] top-0 left-0 right-0  pt-[30px];
     animation-name: brandLogoAnimation;
     animation-duration: 1900ms;
     animation-fill-mode: forwards;
