@@ -42,11 +42,23 @@ const details = () => {
           </button>
         </div>
         <Slider {...settings}>
-          <div className='slide-image'>
-            <Image src={slide1} alt="slide" />
+          <div className="slide-image">
+            <Image
+              src={slide1}
+              alt="slide"
+              // width="290px"
+              // height="200px"
+              // layout="fixed"
+            />
           </div>
-          <div className='slide-image'>
-            <Image src={slide2} alt="slide" />
+          <div className="slide-image">
+            <Image
+              src={slide2}
+              alt="slide"
+              // width="290px"
+              // height="200px"
+              // layout="fixed"
+            />
           </div>
         </Slider>
       </div>

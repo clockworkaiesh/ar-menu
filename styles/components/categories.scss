@@ -26,7 +26,7 @@
   }
 }
 .category-menu-items {
-  @apply grid grid-cols-2 gap-[25px] justify-evenly justify-items-center items-center content-evenly max-w-full mb-[25px] mx-auto;
+  @apply grid grid-cols-2 gap-[25px] justify-evenly justify-items-center items-center content-evenly max-w-full mb-[25px] mx-auto pb-[40px];
   div {
     &.react-reveal {
       &:nth-child(2n-1) {

@@ -148,7 +148,7 @@
       @apply text-base font-semibold capitalize;
     }
     .allergies {
-      @apply flex items-start gap-4 max-w-full overflow-x-scroll py-[6px] px-1;
+      @apply flex items-start gap-2 max-w-full overflow-x-scroll py-[6px] px-1;
       -ms-overflow-style: none; /* Internet Explorer 10+ */
       scrollbar-width: none; /* Firefox */
       &::-webkit-scrollbar {
