@@ -139,9 +139,13 @@ body {
 
 /* Set the height and width of all elements to 100% of viewport */
 .app-container {
+  flex-grow: 1;
+}
+div#__next {
   box-sizing: border-box;
-  width: calc(100vw - 0px);
-  height: calc(100vh - 70px);
   background: #f8f8f8;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

@@ -26,13 +26,7 @@ function App({ Component, pageProps }) {
   return (
     <div className="app-container" style={{ fontFamily: theme.primaryFont }}>
       <ThemeContext.Provider value={theme}>
-        <Global
-          styles={
-            {
-              // Add global styles here
-            }
-          }
-        />
+        <Global />
         <Component {...pageProps} />
       </ThemeContext.Provider>
     </div>
