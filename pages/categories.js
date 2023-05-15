@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unknown-property */
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
-import React, { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 
 // icons
@@ -130,6 +131,7 @@ function Categories() {
             <button
               className="category-button"
               onClick={() => handleCategoryClick('burger')}
+              // eslint-disable-next-line react/no-unknown-property
               css={categoryButtonHover}
             >
               <div className="cat-thumb">

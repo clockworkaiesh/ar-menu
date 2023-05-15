@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
 import React, { useContext } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
