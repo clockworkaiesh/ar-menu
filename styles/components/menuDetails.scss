@@ -1,8 +1,24 @@
 .page-wrapper {
-  @apply bg-[#f5f5f5] w-full h-full box-border relative overflow-y-hidden flex flex-col  justify-between;
+  @apply bg-[#f5f5f5];
+  position: relative;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .details-page-header {
-  @apply w-full py-[20px] px-0 flex justify-between items-center text-center capitalize mb-5;
+  // @apply w-full py-[20px] px-0 flex justify-between items-center text-center capitalize mb-5;
+  margin-bottom: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  text-transform: capitalize;
   h3 {
     @apply font-semibold capitalize text-lg;
   }
@@ -14,7 +30,19 @@
 }
 
 .menu-carousel {
-  @apply max-w-full w-[85%] my-0 mx-auto flex flex-col items-center justify-center;
+  // @apply max-w-full w-[85%] my-0 mx-auto flex flex-col items-center justify-center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 85%;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 35vh;
+  overflow: hidden;
 }
 .slick-dots li {
   @apply m-0 w-4 h-4;
@@ -51,7 +79,13 @@
   @apply object-cover;
 }
 .menu-details-card {
-  @apply px-[25px] bg-white rounded-tl-[30px] rounded-tr-[30px] relative pt-6 transition-all duration-500 ease-in-out translate-y-full  overflow-y-scroll h-[54vh] delay-75;
+  @apply absolute px-[25px] bg-white rounded-tl-[30px] rounded-tr-[30px]  pt-6 transition-all duration-500 ease-in-out translate-y-full  overflow-y-scroll h-[54vh] delay-75;
+  height: 55vh;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {
