@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import Zoom from 'react-reveal/Zoom'
-import ThemeContext from '../../src/ThemeContext'
+import React, { useContext } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import ThemeContext from "../../src/ThemeContext";
+import { Fade } from "react-awesome-reveal";
 
 const MenuItem = ({ thumbnail, name, price }) => {
-  const appTheme = useContext(ThemeContext)
+  const appTheme = useContext(ThemeContext);
 
   return (
-    <Zoom>
+    <Fade className="reveal-div">
       <Link href="/details">
         <div className="menu-item">
           <div className="thumbnail">
@@ -19,14 +19,14 @@ const MenuItem = ({ thumbnail, name, price }) => {
               height="70px"
             />
           </div>
-          <h4 style={{ color: appTheme.secondary }}>{name}</h4>
+          <h4>{name}</h4>
           <p className="price" style={{ color: appTheme.primary }}>
-            $<span style={{ color: appTheme.secondary }}>{price}</span>
+            AED<span style={{ color: appTheme.secondary }}>{price}</span>
           </p>
         </div>
       </Link>
-    </Zoom>
-  )
-}
+    </Fade>
+  );
+};
 
-export default MenuItem
+export default MenuItem;

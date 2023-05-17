@@ -1,48 +1,97 @@
 .landing-page {
-  @apply h-screen w-full pt-3 pb-[55px] px-[35px] relative  z-20 flex flex-col justify-between;
+  @apply h-full w-full py-0 my-0 px-[35px] relative z-20 flex flex-col justify-between;
   background: url(../../public/images/app-home-bg.jpg) left 0 top 0 / cover
       no-repeat,
     #000;
   &::after {
-    content: '';
+    content: "";
     @apply absolute left-0 top-0 right-0 bottom-0 bg-black opacity-70 w-full h-full -z-10;
   }
-  .brand-logo {
-    @apply absolute w-[180px] h-[180px] object-contain mx-auto scale-[0.8] top-0 left-0 right-0  pt-[30px];
-    animation-name: brandLogoAnimation;
-    animation-duration: 1900ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 100ms;
+  .logo-block{
+    @apply pt-5;
+    @include r-medium{
+      @apply pt-[2.25rem];
+    }
   }
-  &.start {
-    &:after {
-      content: '';
-      @apply absolute left-0 top-0 right-0 bottom-0 bg-white opacity-100 w-full h-full z-10;
+  .brand-logo {
+    @apply  w-[180px] h-[180px] object-contain mx-auto;
+    // @apply absolute w-[180px] h-[180px] object-contain mx-auto scale-[0.8] top-0 left-0 right-0  pt-[30px];
+    // animation-name: brandLogoAnimation;
+    // animation-duration: 1900ms;
+    // animation-fill-mode: forwards;
+    // animation-timing-function: linear;
+    // animation-delay: 100ms;
+    @include r-medium{
+      @apply w-[300px] h-[300px];
     }
-    .brand-logo {
-      @apply z-40;
+    @include r-plus{
+      @apply w-[360px] h-[360px];
     }
+    @include r-laptop{
+      @apply w-[400px] h-[400px];
+    }
+  }
+  // &.start {
+  //   &:after {
+  //     content: "";
+  //     @apply absolute left-0 top-0 right-0 bottom-0 bg-white opacity-100 w-full h-full z-10;
+  //   }
+  //   .brand-logo {
+  //     @apply z-40;
+  //   }
+  // }
+  @include r-medium{
+    @apply pt-[40px];
   }
 }
 
 .content-block {
-  @apply flex flex-col gap-[90px];
+  @apply flex flex-col justify-between;
   h2 {
     @apply text-[40px] text-white font-bold leading-tight mb-2;
+    @include r-medium{
+      @apply text-[60px] mb-[20px] leading-[1.1];
+    }
+    @include r-laptop{
+      @apply text-[80px] ;
+    }
   }
   p {
     @apply text-white text-lg;
+    @include r-medium{
+      @apply text-[21px];
+    }
+    @include r-laptop{
+      @apply text-[28px];
+    }
+  }
+  @include r-medium{
+    @apply pb-[25px];
   }
 }
 // copyright
 .copyright {
-  @apply text-white text-center;
+  @apply text-white text-center mt-7;
   button {
-    @apply mb-5;
+    @apply mb-[12px];
+    @include r-medium{
+      @apply mb-[20px] text-[23px];
+    } 
+    @include r-laptop{
+      margin-bottom: 40px;
+      font-size: 29px;
+      padding: 23px 50px;
+      margin-top: 60px;
+    }
   }
   .powered-by {
-    @apply flex gap-1 items-center justify-center;
+    @apply flex gap-1 items-center justify-center text-[13px];
+    @include r-medium{
+      @apply gap-[10px] text-lg leading-[17px];
+    }
+    @include r-laptop{
+      @apply text-[20px];
+    }
   }
 }
 
@@ -64,33 +113,59 @@
 // LANGUAGE SWITCHER
 .toggle {
   @apply mb-4 cursor-pointer inline-block;
+  @include r-medium{
+    @apply mb-[3rem];
+  }
 }
 .toggle-switch {
-  @apply inline-block bg-black rounded-[16px] w-[56px] h-[20px] relative align-middle transition-all duration-300;
+  @apply inline-block bg-black rounded-[16px] w-[42px] h-[20px] relative align-middle transition-all duration-300;
 
   &:before,
   &:after {
-    content: '';
+    content: "";
   }
   &:before {
     @apply block rounded-[30px] w-[20px] h-[20px] absolute top-0 left-0 transition-all duration-300;
     // background: orange;
+    @include r-laptop{
+      @apply w-[24px] h-[24px];
+    }
   }
 
   .toggle-checkbox:checked + & {
     &:before {
-      @apply left-[36px];
+      @apply left-[22px];
+      @include r-laptop{
+        @apply left-[26px];
+      }
     }
+  }
+
+  @include r-laptop{
+    height: 25px;
+    width: 50px;
   }
 }
 .toggle-checkbox {
   @apply absolute hidden;
 }
 .toggle-label {
-  @apply ml-[5px] relative top-[2px] mx-[5px] text-xs font-light;
+  @apply ml-[5px] relative top-[2px] mx-[10px] text-xs font-light;
+  @include r-medium{
+    @apply text-[19px];
+  }
+  @include r-laptop{
+    @apply text-[24px] mr-[10px];
+  }
 }
 .intro-text {
   @include r-medium {
     @apply max-w-[90%] text-center mx-auto;
+  }
+}
+.powered-logo{
+  @apply w-[80px] h-auto;
+  @include r-medium{
+    @apply w-[120px];
   }
 }

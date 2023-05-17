@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext} from 'react'
 import Image from 'next/image'
 // ingredients icons
 import chicken from '../../public/images/icons/chicken.png'
@@ -18,12 +18,9 @@ import ThemeContext from '../../src/ThemeContext'
 function MenuDetailsAnimatedCard() {
   const appTheme = useContext(ThemeContext)
 
-  const menuDetailsCardRef = useRef(null)
-  useEffect(() => {
-    menuDetailsCardRef.current.classList.add('up')
-  }, [])
+
   return (
-    <div className="menu-details-card" ref={menuDetailsCardRef}>
+    <div className="menu-details-card">
       <div className="scrollable-area">
         {/* rating */}
         <h4 className="rating">
@@ -76,45 +73,46 @@ function MenuDetailsAnimatedCard() {
 
         {/* allergy warnings */}
         <div className="warning-block">
-          <h4>contains:</h4>
+          <h4>contains</h4>
           <div className="allergies">
             <div
-              style={{ borderColor: appTheme.primary, color: appTheme.text }}
+              style={{ borderColor: appTheme.primary}}
             >
               <Image
                 src={nuts}
                 alt="nuts"
-                width="22px"
-                height="22px"
+                width="18px"
+                height="18px"
                 layout="fixed"
               />
               <p>nuts</p>
             </div>
             <div
-              style={{ borderColor: appTheme.primary, color: appTheme.text }}
+              style={{ borderColor: appTheme.primary}}
             >
               <Image
                 src={dairy}
                 alt="dairy"
-                width="22px"
-                height="22px"
+                width="18px"
+                height="18px"
                 layout="fixed"
               />
               <p>dairy</p>
             </div>
             <div
-              style={{ borderColor: appTheme.primary, color: appTheme.text }}
+              style={{ borderColor: appTheme.primary}}
             >
               <Image
                 src={gluten}
                 alt="gluten"
-                width="22px"
-                height="22px"
+                width="18px"
+                height="18px"
                 layout="fixed"
               />
               <p>gluten</p>
             </div>
           </div>
+          <p className='warning-note'>Please note that this item contains some ingredients that you might be allergic to.</p>
         </div>
       </div>
     </div>

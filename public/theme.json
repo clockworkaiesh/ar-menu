@@ -3,6 +3,6 @@
   "secondary": "#1d2741",
   "accent": "black",
   "text": "#858992",
-  "primaryFont": "Montserrat",
-  "secondaryFont": "Montserrat"
+  "primaryFont": "'Montserrat', sans-serif",
+  "secondaryFont": "'Montserrat', sans-serif"
 }

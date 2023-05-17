@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 import { useContext, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import menuIcon from '../../public/images/icons/menu-toggle.svg'
+import menuIcon from '../../public/images/icons/hamburger.png'
 import { FaHome } from 'react-icons/fa'
 import brandLogo from '../../public/images/coffee-logo.png'
 import hashpyLogo from '../../public/images/brand/logo-black.png'
@@ -31,7 +31,7 @@ function AppHeader() {
     <>
       <div className="app-header">
         <button className="open-btn" onClick={handleSidebarOpen}>
-          <Image src={menuIcon} alt="openMenu" />
+          <Image src={menuIcon} alt="openMenu" width="22px" height="22px"/>
         </button>
         <button className="home-link" style={{ color: appTheme.primary }}>
           <Link href="/">
