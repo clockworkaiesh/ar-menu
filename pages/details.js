@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect, useRef, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,6 @@ import slide2 from "../public/images/menu/pizza-slider-2.jpg";
 import MenuDetailsAnimatedCard from "../src/components/MenuDetailsAnimatedCard";
 // Context setup
 import ThemeContext from "../src/ThemeContext";
-import AppHeader from "../src/components/AppHeader";
 const details = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isFavourite, setIsFavourite] = useState(false);

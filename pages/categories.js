@@ -5,7 +5,7 @@ import { useState, useContext, useEffect } from "react";
 import Image from "next/image";
 
 // react animation library
-import { Slide, Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 // icons
 import catShake from "../public/images/icons/cat-bobba.png";
 import catBurger from "../public/images/icons/cat-burger.png";

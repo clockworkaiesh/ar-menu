@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import ThemeContext from '../src/ThemeContext'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -37,13 +37,13 @@ export default function Home() {
       filter: 'hue-rotate(3deg)',
     },
   })
-  const [startClass, setStartClass] = useState(true)
+  // const [startClass, setStartClass] = useState(true)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setStartClass(false)
-    }, 1900)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setStartClass(false)
+  //   }, 1900)
+  // }, [])
   const toggleSwitch = css({
     backgroundColor: appTheme.primary,
   })
